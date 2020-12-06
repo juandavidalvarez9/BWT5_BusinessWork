@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-12-06T23:02:07.665Z" agent="5.0 (X11)" etag="LHa9KRu045D15HDS-JtQ" version="13.10.9" type="github">
+<mxfile host="app.diagrams.net" modified="2020-12-06T23:03:16.962Z" agent="5.0 (X11)" etag="4mJoppZzMI22o6pHDn7Y" version="13.10.9" type="github">
   <diagram name="Page-1" id="64c3da0e-402f-94eb-ee01-a36477274f13">
     <mxGraphModel dx="3857" dy="3949" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" background="#ffffff" math="0" shadow="0">
       <root>
@@ -717,7 +717,7 @@
             <mxPoint x="2670" y="70" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="E-M19BCUzTmZ8NUMA22a-417" value="7. Visualizar" style="whiteSpace=wrap;rounded=1;shadow=1;fillColor=#10739E;strokeColor=none;fontColor=#FFFFFF;fontStyle=1;fontSize=24;fontFamily=Verdana;" parent="1" vertex="1">
+        <mxCell id="E-M19BCUzTmZ8NUMA22a-417" value="7. Visualizar App" style="whiteSpace=wrap;rounded=1;shadow=1;fillColor=#10739E;strokeColor=none;fontColor=#FFFFFF;fontStyle=1;fontSize=24;fontFamily=Verdana;" parent="1" vertex="1">
           <mxGeometry x="3102.5" y="-700" width="225" height="50" as="geometry" />
         </mxCell>
         <mxCell id="E-M19BCUzTmZ8NUMA22a-418" value="1.1 VALIDAR USUARIO" style="whiteSpace=wrap;rounded=1;fillColor=#F2931E;strokeColor=none;shadow=1;fontColor=#FFFFFF;fontStyle=1;fontSize=15;fontFamily=Verdana;" parent="1" vertex="1">
