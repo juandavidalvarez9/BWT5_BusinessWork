@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-12-06T23:03:16.962Z" agent="5.0 (X11)" etag="4mJoppZzMI22o6pHDn7Y" version="13.10.9" type="github">
+<mxfile host="app.diagrams.net" modified="2020-12-06T23:08:33.761Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.55" etag="ZlhavehtmW3I9IAVEDcE" version="13.9.3" type="github">
   <diagram name="Page-1" id="64c3da0e-402f-94eb-ee01-a36477274f13">
-    <mxGraphModel dx="3857" dy="3949" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" background="#ffffff" math="0" shadow="0">
+    <mxGraphModel dx="3460" dy="3585" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -899,6 +899,39 @@
               <mxPoint x="585" y="-499.9999999999999" />
             </Array>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="oyvHHUb7gOQ4gfhel80k-233" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="1296" y="-293" width="102.5" height="809.5" as="geometry" />
+        </mxCell>
+        <mxCell id="oyvHHUb7gOQ4gfhel80k-234" value="Text" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1440" y="-50" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="oyvHHUb7gOQ4gfhel80k-235" value="&lt;font style=&quot;font-size: 43px&quot;&gt;&amp;nbsp;Fernando Arciniegas&amp;nbsp;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="1125" y="210" width="430" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="oyvHHUb7gOQ4gfhel80k-236" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="1900" y="-83" width="110" height="389.5" as="geometry" />
+        </mxCell>
+        <mxCell id="oyvHHUb7gOQ4gfhel80k-237" value="&lt;font style=&quot;font-size: 43px&quot;&gt;Felipe Serna Vallejo&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="1754" y="210" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="oyvHHUb7gOQ4gfhel80k-238" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="3141" y="-83" width="110" height="389.5" as="geometry" />
+        </mxCell>
+        <mxCell id="oyvHHUb7gOQ4gfhel80k-239" value="&lt;font style=&quot;font-size: 43px&quot;&gt;Jorge alberto&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="3060" y="210" width="270" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="oyvHHUb7gOQ4gfhel80k-240" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="2741" y="-83" width="110" height="389.5" as="geometry" />
+        </mxCell>
+        <mxCell id="oyvHHUb7gOQ4gfhel80k-241" value="&lt;span style=&quot;font-size: 43px&quot;&gt;Carlos Arevalo&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="2645" y="210" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="oyvHHUb7gOQ4gfhel80k-242" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="2306" y="-83" width="110" height="389.5" as="geometry" />
+        </mxCell>
+        <mxCell id="oyvHHUb7gOQ4gfhel80k-243" value="&lt;span style=&quot;font-size: 43px&quot;&gt;Juan David&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="2245" y="210" width="230" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
