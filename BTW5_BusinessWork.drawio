@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-12-07T22:53:29.073Z" agent="5.0 (X11)" etag="wN_vGyd85WXuaWAjfihH" version="13.10.9" type="github">
+<mxfile host="app.diagrams.net" modified="2020-12-07T22:54:53.738Z" agent="5.0 (X11)" etag="D41tuiId7s1suHcOkil_" version="13.10.9" type="github">
   <diagram name="Page-1" id="64c3da0e-402f-94eb-ee01-a36477274f13">
     <mxGraphModel dx="3180" dy="3260" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" background="#ffffff" math="0" shadow="0">
       <root>
@@ -403,11 +403,11 @@
         <mxCell id="E-M19BCUzTmZ8NUMA22a-357" value="5. Consultar" style="whiteSpace=wrap;rounded=1;shadow=1;fillColor=#10739E;strokeColor=none;fontColor=#FFFFFF;fontStyle=1;fontSize=24;fontFamily=Verdana;" parent="1" vertex="1">
           <mxGeometry x="2152.5" y="-690" width="225" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="E-M19BCUzTmZ8NUMA22a-358" value="5.1 RECUPERAR PARÁMETROS" style="whiteSpace=wrap;rounded=1;fillColor=#F2931E;strokeColor=none;shadow=1;fontColor=#FFFFFF;fontStyle=1;fontSize=15;fontFamily=Verdana;" parent="1" vertex="1">
-          <mxGeometry x="2195" y="-596.5000000000002" width="140" height="60" as="geometry" />
+        <mxCell id="E-M19BCUzTmZ8NUMA22a-358" value="5.1 RECUPERAR PARÁMETROS DEL MODELO" style="whiteSpace=wrap;rounded=1;fillColor=#F2931E;strokeColor=none;shadow=1;fontColor=#FFFFFF;fontStyle=1;fontSize=15;fontFamily=Verdana;" parent="1" vertex="1">
+          <mxGeometry x="2177.5" y="-600" width="175" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="E-M19BCUzTmZ8NUMA22a-359" value="1.1.1 REDIRECCIONAR" style="whiteSpace=wrap;rounded=1;fillColor=#12AAB5;strokeColor=none;shadow=1;fontColor=#FFFFFF;fontStyle=1;fontFamily=Verdana;fontSize=14;" parent="1" vertex="1">
-          <mxGeometry x="2110" y="-429.5" width="150" height="60" as="geometry" />
+        <mxCell id="E-M19BCUzTmZ8NUMA22a-359" value="5.1.1 OBTENER DETALLES DEL MODELO" style="whiteSpace=wrap;rounded=1;fillColor=#12AAB5;strokeColor=none;shadow=1;fontColor=#FFFFFF;fontStyle=1;fontFamily=Verdana;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="2110" y="-429.5" width="150" height="69.5" as="geometry" />
         </mxCell>
         <mxCell id="E-M19BCUzTmZ8NUMA22a-360" value="1.1.2 ALERTA" style="whiteSpace=wrap;rounded=1;fillColor=#12AAB5;strokeColor=none;shadow=1;fontColor=#FFFFFF;fontStyle=1;fontFamily=Verdana;fontSize=14;" parent="1" vertex="1">
           <mxGeometry x="2310" y="-429.4999999999998" width="120" height="60" as="geometry" />
