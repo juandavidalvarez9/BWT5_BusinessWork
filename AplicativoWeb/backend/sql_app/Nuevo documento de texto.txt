@@ -1,0 +1,60 @@
+models.py
+%%%%%%%
+from sqlalchemy import Boolean, Column, ForeignKey, Integer, String
+from sqlalchemy.orm import relationship
+
+from .database import Base
+
+class Departamento(Base):
+    __tablename__ = "departamentos"
+
+    id_departamento = Column(Integer, primary_key=True, index=True)
+    name_dep = Column(String, index=True)
+    
+    users = relationship("User", back_populates="owner")
+
+class User(Base):
+    __tablename__ = "users"
+
+    username = Column(String, primary_key=True, index=True)
+    password = Column(String)
+    email = Column(String, unique=True, index=True)
+    name = Column(String)
+    last_name = Column(String)
+    celular = Column(Integer)
+    dep_id_dep = Column(Integer, ForeignKey("departamentos.id_departamento"))
+
+    owner = relationship("Departamento", back_populates="users")
+    documentss = relationship("Documents", back_populates="owner2")
+
+class Documents(Base):
+    __tablename__ = "documentos"
+
+    id_documento = Column(Integer, primary_key=True, index=True)
+    name_document = Column(String)
+    expiracion = Column(String, unique=True, index=True)
+    notificacion = Column(String)
+    descripcion = Column(String)
+    Users_username = Column(String, ForeignKey("users.username"))
+
+    owner2 = relationship("User", back_populates="documentss")
+    
+
+&&&&&&&
+database.py
+
+&&&&&&&
+from sqlalchemy import create_engine
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker
+
+SQLALCHEMY_DATABASE_URL = "postgresql://postgres:root@localhost/btw5"
+
+engine = create_engine(
+    SQLALCHEMY_DATABASE_URL
+)
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+
+Base = declarative_base()
+6&&&&&&&
+
