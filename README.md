@@ -1,6 +1,6 @@
 # BWT5_BusinessWork
 
-> **Estado:** proyecto de 2020, sin mantenimiento. Se conserva como archivo.
+> Proyecto de 2020.
 
 Prototipo de gestión documental: autenticación de usuarios para cargar y descargar documentos, con la idea de avisar cuando un documento está por vencer.
 
