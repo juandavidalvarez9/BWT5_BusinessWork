@@ -4,7 +4,7 @@ from typing import List
 from fastapi import Depends, FastAPI, HTTPException
 from sqlalchemy.orm import Session
 
-from . import crud, models, schemas
+from . import crud, models, schemas, seguridad
 from .database import SessionLocal, engine
 
 
@@ -24,6 +24,15 @@ def get_db():
         yield db
     finally:
         db.close()
+
+
+@app.post("/login", response_model=schemas.Ingreso)
+def login(credenciales: schemas.Credenciales, db: Session = Depends(get_db)):
+    usuario = crud.get_user(db, user_username=credenciales.username)
+    # Misma respuesta si el usuario no existe o la clave es mala: no revela quién está registrado.
+    if usuario is None or not seguridad.verificar(credenciales.password, usuario.password):
+        raise HTTPException(status_code=401, detail="Usuario o contraseña incorrectos.")
+    return usuario
 
 
 @app.post("/users/", response_model=schemas.User)

@@ -73,3 +73,13 @@ class Departamento(DepartamentoBase):
 
     users: List[User]=[]
     model_config = ConfigDict(from_attributes=True)
+
+
+class Credenciales(BaseModel):
+    username: str
+    password: str
+
+
+class Ingreso(BaseModel):
+    username: str
+    name: str
