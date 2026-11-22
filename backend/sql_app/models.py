@@ -1,5 +1,4 @@
-
-from sqlalchemy import Boolean, Column, ForeignKey, Integer, String, DATE
+from sqlalchemy import BigInteger, Column, DATE, ForeignKey, Integer, String
 from sqlalchemy.orm import relationship
 
 from .database import Base
@@ -20,7 +19,7 @@ class User(Base):
     email = Column(String, index=True)
     name = Column(String)
     last_name = Column(String)
-    celular = Column(Integer)
+    celular = Column(BigInteger)
     dep_id_dep = Column(Integer, ForeignKey("departamentos.id_departamento"))
     password = Column(String)
 
@@ -38,4 +37,3 @@ class Documents(Base):
     Users_username = Column(String, ForeignKey("users.username"))
 
     owner2 = relationship("User", back_populates="documentss")
-    

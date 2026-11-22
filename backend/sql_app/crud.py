@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
 
-from . import models, schemas
+from . import models, schemas, seguridad
 
 
 def get_user(db: Session, user_username: str):
@@ -11,10 +11,14 @@ def get_user_by_email(db: Session, email: str):
     return db.query(models.User).filter(models.User.email == email).first()
 
 
-def get_users(db: Session, user_username: str):
-    return db.query(models.User).offset(user_username).all()
+def get_users(db: Session, skip: int = 0, limit: int = 100):
+    return db.query(models.User).offset(skip).limit(limit).all()
 
-    
+
+def get_departamento(db: Session, id_departamento: int):
+    return db.get(models.Departamento, id_departamento)
+
+
 def get_departamento_por_nombre(db: Session, name_dep: str):
     return db.query(models.Departamento).filter(models.Departamento.name_dep == name_dep).first()
 
@@ -31,9 +35,11 @@ def create_departamento(db: Session, departamento: schemas.DepartamentoCreate):
     return db_departamento
 
 
-def create_usuario_departamento(db: Session, user: schemas.UserCreate):
-    s_password= user.password
-    db_user = models.User(**user.dict())
+def create_user(db: Session, user: schemas.UserCreate, dep_id: int):
+    datos = user.model_dump(exclude={"password"})
+    db_user = models.User(
+        **datos, dep_id_dep=dep_id, password=seguridad.crear_hash(user.password)
+    )
     db.add(db_user)
     db.commit()
     db.refresh(db_user)

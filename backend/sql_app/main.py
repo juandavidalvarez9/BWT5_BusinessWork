@@ -28,16 +28,18 @@ def get_db():
 
 @app.post("/users/", response_model=schemas.User)
 def create_user(dep_id: int, user: schemas.UserCreate, db: Session = Depends(get_db)):
-    db_user = crud.create_usuario_departamento(db, username=user.username, password=user.password, email=user.email, name=user.name, last_name=user.last_name, celular=user.celular, dep_id_dep=dep_id)
-    if db_user:
-        raise HTTPException(status_code=400, detail="Email already registered")
-    return crud.create_usuario_departamento(db=db, user=user)
+    if crud.get_departamento(db, dep_id) is None:
+        raise HTTPException(status_code=404, detail="El departamento no existe")
+    if crud.get_user(db, user_username=user.username):
+        raise HTTPException(status_code=400, detail="El usuario ya existe")
+    if crud.get_user_by_email(db, email=user.email):
+        raise HTTPException(status_code=400, detail="El correo ya está registrado")
+    return crud.create_user(db=db, user=user, dep_id=dep_id)
 
 
 @app.get("/users/", response_model=List[schemas.User])
-def read_users(db: Session = Depends(get_db)):
-    users = crud.get_users(db)
-    return users
+def read_users(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
+    return crud.get_users(db, skip=skip, limit=limit)
 
 
 @app.get("/users/{user_username}", response_model=schemas.User)
