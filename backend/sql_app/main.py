@@ -1,3 +1,4 @@
+from contextlib import asynccontextmanager
 from typing import List
 
 from fastapi import Depends, FastAPI, HTTPException
@@ -6,9 +7,15 @@ from sqlalchemy.orm import Session
 from . import crud, models, schemas
 from .database import SessionLocal, engine
 
-#models.Base.metadata.create_all(bind=engine)
 
-app = FastAPI()
+@asynccontextmanager
+async def arranque(app: FastAPI):
+    # Crea las tablas que falten; no toca las que ya existen.
+    models.Base.metadata.create_all(bind=engine)
+    yield
+
+
+app = FastAPI(title="BusinessWork", lifespan=arranque)
 
 # Dependency
 def get_db():
@@ -47,10 +54,10 @@ def create_document_for_user(user_username: str, documento: schemas.DocumentsCre
 
 @app.post("/departamentos/", response_model=schemas.Departamento)
 def create_departamento(dept: schemas.DepartamentoCreate, db: Session = Depends(get_db)):
-    db_dept = crud.get_departamentos(db, name_dep=dept.name_dep)
-    if db_dept:
+    if crud.get_departamento_por_nombre(db, name_dep=dept.name_dep):
         raise HTTPException(status_code=400, detail="El departamento ya existe")
-    return crud.create_departamentos(db=db, dept=dept)
+    return crud.create_departamento(db=db, departamento=dept)
+
 
 @app.get("/documents/", response_model=List[schemas.Documents])
 def read_documents(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
@@ -59,5 +66,4 @@ def read_documents(skip: int = 0, limit: int = 100, db: Session = Depends(get_db
 
 @app.get("/departamentos/", response_model=List[schemas.Departamento])
 def read_departamentos(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
-    departamentos = crud.get_documentos(db, skip=skip, limit=limit)
-    return departamentos
+    return crud.get_departamentos(db, skip=skip, limit=limit)

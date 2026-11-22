@@ -1,7 +1,7 @@
 import datetime
 from typing import List, Optional
 
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 
 class DocumentsBase(BaseModel):
     name_document: str
@@ -18,8 +18,7 @@ class Documents(DocumentsBase):
     id_documento: int
     Users_username: str
 
-    class Config:
-        orm_mode = True
+    model_config = ConfigDict(from_attributes=True)
 
 
 class UserBase(BaseModel):
@@ -43,8 +42,7 @@ class User(UserBase):
     celular: int
     documentss: List[Documents]=[]
 
-    class Config:
-        orm_mode = True
+    model_config = ConfigDict(from_attributes=True)
 
 
 class DepartamentoBase(BaseModel):
@@ -59,11 +57,4 @@ class Departamento(DepartamentoBase):
     id_departamento: int
 
     users: List[User]=[]
-    class Config:
-        orm_mode = True
-
-
-
-
-
-
+    model_config = ConfigDict(from_attributes=True)

@@ -12,3 +12,7 @@ venv/
 *.zip
 .DS_Store
 Thumbs.db
+
+# Base local y cachés
+*.db
+.pytest_cache/

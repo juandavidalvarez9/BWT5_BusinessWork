@@ -15,15 +15,21 @@ def get_users(db: Session, user_username: str):
     return db.query(models.User).offset(user_username).all()
 
     
-def get_departamentos(db: Session, name_dep: str):
+def get_departamento_por_nombre(db: Session, name_dep: str):
     return db.query(models.Departamento).filter(models.Departamento.name_dep == name_dep).first()
 
-def create_departamentos(db: Session, departamento: schemas.DepartamentoCreate):
-    db_departamentos = models.Departamento(name_dep=departamento.name_dep)
-    db.add(db_departamentos)
+
+def get_departamentos(db: Session, skip: int = 0, limit: int = 100):
+    return db.query(models.Departamento).offset(skip).limit(limit).all()
+
+
+def create_departamento(db: Session, departamento: schemas.DepartamentoCreate):
+    db_departamento = models.Departamento(name_dep=departamento.name_dep)
+    db.add(db_departamento)
     db.commit()
-    db.refresh(db_departamentos)
-    return db_departamentos  
+    db.refresh(db_departamento)
+    return db_departamento
+
 
 def create_usuario_departamento(db: Session, user: schemas.UserCreate):
     s_password= user.password
