@@ -1,8 +1,14 @@
+import os
+
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-SQLALCHEMY_DATABASE_URL = "postgresql://postgres:root@localhost/btw5"
+# La cadena de conexión se lee del entorno para no versionar credenciales.
+# Ejemplo: export DATABASE_URL="postgresql://usuario:clave@localhost/btw5"
+SQLALCHEMY_DATABASE_URL = os.environ.get(
+    "DATABASE_URL", "postgresql://usuario:clave@localhost/btw5"
+)
 
 engine = create_engine(
     SQLALCHEMY_DATABASE_URL
