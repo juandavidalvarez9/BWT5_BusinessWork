@@ -1,7 +1,9 @@
 from contextlib import asynccontextmanager
+from pathlib import Path
 from typing import List
 
 from fastapi import Depends, FastAPI, HTTPException
+from fastapi.staticfiles import StaticFiles
 from sqlalchemy.orm import Session
 
 from . import crud, models, schemas, seguridad
@@ -81,3 +83,9 @@ def read_documents(skip: int = 0, limit: int = 100, db: Session = Depends(get_db
 @app.get("/departamentos/", response_model=List[schemas.Departamento])
 def read_departamentos(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     return crud.get_departamentos(db, skip=skip, limit=limit)
+
+
+# La página web se sirve desde la misma aplicación. Va al final para que
+# las rutas de la API tengan prioridad.
+FRONTEND = Path(__file__).resolve().parents[2] / "frontend"
+app.mount("/", StaticFiles(directory=FRONTEND, html=True), name="frontend")
