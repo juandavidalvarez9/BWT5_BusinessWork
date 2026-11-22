@@ -51,7 +51,7 @@ def get_documentos(db: Session, skip: int = 0, limit: int = 100):
 
 
 def create_document_user(db: Session, documento: schemas.DocumentsCreate, user_username: str):
-    db_documents = models.Documents(**documento.dict(), Users_username=user_username)
+    db_documents = models.Documents(**documento.model_dump(), Users_username=user_username)
     db.add(db_documents)
     db.commit()
     db.refresh(db_documents)

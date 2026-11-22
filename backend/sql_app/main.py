@@ -52,7 +52,10 @@ def read_user(user_username: str, db: Session = Depends(get_db)):
 
 @app.post("/users/{user_username}/documents/", response_model=schemas.Documents)
 def create_document_for_user(user_username: str, documento: schemas.DocumentsCreate, db: Session = Depends(get_db)):
-    return crud.create_document_user(db=db, documento=documento, User_username=user_username)
+    if crud.get_user(db, user_username=user_username) is None:
+        raise HTTPException(status_code=404, detail="User not found")
+    return crud.create_document_user(db=db, documento=documento, user_username=user_username)
+
 
 @app.post("/departamentos/", response_model=schemas.Departamento)
 def create_departamento(dept: schemas.DepartamentoCreate, db: Session = Depends(get_db)):
