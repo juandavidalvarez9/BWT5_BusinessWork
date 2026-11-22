@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>BusinessWork | Gestión Documental</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<img class="wave" src="img/img3.jpg" alt="">
+	<div class="container">
+		<div class="img">
+			<img src="img/img1.svg" alt="">
+		</div>
+		<div class="login-content">
+			<form id="form-ingreso">
+				<img src="img/img6.jpeg" alt="">
+				<h3 class="title">Business Work</h3>
+				<div class="input-div one">
+					<div class="i">
+						<i class="fas fa-user"></i>
+					</div>
+					<div class="div">
+						<h5>Usuario</h5>
+						<input type="text" class="input" id="usuario" name="usuario" autocomplete="username" required>
+					</div>
+				</div>
+				<div class="input-div pass">
+					<div class="i">
+						<i class="fas fa-lock"></i>
+					</div>
+					<div class="div">
+						<h5>Contraseña</h5>
+						<input type="password" class="input" id="clave" name="clave" autocomplete="current-password" required>
+					</div>
+				</div>
+
+				<input type="submit" class="btn" id="ingresar" value="Ingresar">
+				<p class="mensaje" id="mensaje" role="alert"></p>
+			</form>
+
+			<section class="panel" id="panel" hidden>
+				<h3 class="title" id="saludo"></h3>
+				<p class="resumen" id="resumen"></p>
+				<table class="documentos">
+					<thead>
+						<tr><th>Documento</th><th>Vence</th><th>Estado</th></tr>
+					</thead>
+					<tbody id="documentos"></tbody>
+				</table>
+				<button type="button" class="btn" id="salir">Salir</button>
+			</section>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/loginmain.js"></script>
+</body>
+</html>

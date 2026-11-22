@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Configuración local y credenciales
+.env
+
+# Archivos comprimidos y del sistema
+*.rar
+*.zip
+.DS_Store
+Thumbs.db
+
+# Base local y cachés
+*.db
+.pytest_cache/

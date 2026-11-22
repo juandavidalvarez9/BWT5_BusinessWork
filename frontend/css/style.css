@@ -226,3 +226,62 @@ a:hover{
 		justify-content: center;
 	}
 }
+
+/* Mensajes del ingreso y panel de documentos */
+.mensaje{
+	min-height: 1.4rem;
+	margin-top: .6rem;
+	color: #c0392b;
+	font-family: 'Poppins', sans-serif;
+	font-size: .9rem;
+}
+
+.panel{
+	width: 100%;
+	max-width: 520px;
+	text-align: center;
+}
+
+.panel .resumen{
+	margin: .5rem 0 1rem;
+	color: #555;
+	font-family: 'Poppins', sans-serif;
+	font-size: .9rem;
+}
+
+.documentos{
+	width: 100%;
+	border-collapse: collapse;
+	font-family: 'Poppins', sans-serif;
+	font-size: .85rem;
+	text-align: left;
+}
+
+.documentos th,
+.documentos td{
+	padding: .55rem .4rem;
+	border-bottom: 1px solid #d9d9d9;
+	vertical-align: top;
+}
+
+.documentos small{
+	display: block;
+	color: #777;
+	font-weight: normal;
+}
+
+.estado{
+	display: inline-block;
+	padding: .1rem .55rem;
+	border-radius: 999px;
+	font-size: .78rem;
+	white-space: nowrap;
+}
+
+.estado.vencido{ background: #fdecea; color: #b03a2e; }
+.estado.por_vencer{ background: #fff4d6; color: #8a6100; }
+.estado.vigente{ background: #e6f4ea; color: #1e7b3c; }
+
+[hidden]{
+	display: none !important;
+}
